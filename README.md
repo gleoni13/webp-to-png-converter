@@ -19,3 +19,14 @@ A lightweight Python script that automatically converts all `.webp` images in it
    ```bash
    git clone [https://github.com/your-username/webp-to-png-converter.git](https://github.com/your-username/webp-to-png-converter.git)
    cd webp-to-png-converter
+   ```
+
+## 💡 Usage Guide
+
+### 1. Batch Image Downloader (`website_image_downloader.py`)
+1. Place the `webp_to_png_converter.py` file into the folder containing your `.webp` images.
+2. Run the script:
+   ```python
+   python webp_to_png_converter.py
+   ```
+3. The converted `.png` files will be saved in the same directory.
