@@ -1,26 +1,26 @@
 import os
 from PIL import Image
 
-# Ottiene la cartella in cui si trova questo script
-cartella_corrente = os.path.dirname(os.path.abspath(__file__))
+# Get the directory where this script is located
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Cambia la directory di lavoro del terminale su quella dello script
-os.chdir(cartella_corrente)
+# Change the working directory to the script's directory
+os.chdir(current_dir)
 
-conteggio = 0
+count = 0
 
-# Cicla tutti i file nella cartella
+# Loop through all files in the directory
 for file in os.listdir('.'):
     if file.lower().endswith('.webp'):
-        # Apri l'immagine WebP
+        # Open the WebP image
         img = Image.open(file)
         
-        # Genera il nuovo nome sostituendo l'estensione
-        nome_png = os.path.splitext(file)[0] + '.png'
+        # Generate the new filename by replacing the extension
+        png_name = os.path.splitext(file)[0] + '.png'
         
-        # Salva in formato PNG
-        img.save(nome_png, 'PNG')
-        conteggio += 1
-        print(f"Convertito: {file} -> {nome_png}")
+        # Save in PNG format
+        img.save(png_name, 'PNG')
+        count += 1
+        print(f"Converted: {file} -> {png_name}")
 
-print(f"\nFatto! Convertite con successo {conteggio} immagini.")
+print(f"\nDone! Successfully converted {count} images.")
